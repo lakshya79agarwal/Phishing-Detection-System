@@ -58,7 +58,7 @@ if st.button("🚀 Analyze Security"):
         st.warning("Please enter a URL first!")
     else:
         feature_count = model.n_features_in_
-        feature_list = [1.0] * feature_count 
+        feature_list = [0.0] * feature_count 
         feature_list[7] = float(ssl)
         feature_list[13] = float(anchor)
         feature_list[25] = float(traffic)
