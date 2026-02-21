@@ -7,8 +7,6 @@ Original file is located at
     https://colab.research.google.com/drive/1x2tOJWfz-bhaPTu-xQpejaZPaG73yHOe
 """
 
-!pip install streamlit pymongo joblib
-
 import streamlit as st
 import joblib
 import numpy as np
