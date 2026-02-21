@@ -1,7 +1,5 @@
-streamlit
-joblib
+streamlit==1.32.0
 scikit-learn==1.2.2
-pymongo
-dnspython
-
-numpy
+numpy==1.24.3
+joblib==1.2.0
+pymongo==4.6.1
