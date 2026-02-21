@@ -66,7 +66,7 @@ if st.button("🚀 Analyze Security"):
 
 # Convert to NumPy array and force the 2D shape (1 row, 30 columns)
 # This is the "Gold Standard" way to prevent TypeErrors in Scikit-Learn
-        features_as_array = np.array(feature_list).reshape(1, -1)
+        features_as_array = np.array(feature_list, dtype=np.float64).reshape(1, -1)
 
 # Run the prediction
         prediction = model.predict(features_as_array)
