@@ -16,7 +16,6 @@ from datetime import datetime
 # 1. LOAD THE MODEL
 # This assumes the .pkl file is in the same GitHub folder
 model = joblib.load('phishing_detector (1).pkl')
-st.write("Model type:", type(model))
 # 2. DATABASE LOGGING FUNCTION
 # This will use the "Secrets" you set in the Streamlit Dashboard
 MONGO_URI = st.secrets["mongo_uri"]
