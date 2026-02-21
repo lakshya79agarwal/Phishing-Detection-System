@@ -16,7 +16,7 @@ from datetime import datetime
 # 1. LOAD THE MODEL
 # This assumes the .pkl file is in the same GitHub folder
 model = joblib.load('phishing_detector.pkl')
-
+st.write("Model type:", type(model))
 # 2. DATABASE LOGGING FUNCTION
 # This will use the "Secrets" you set in the Streamlit Dashboard
 MONGO_URI = st.secrets["mongo_uri"]
@@ -33,7 +33,7 @@ def log_to_cloud(url, verdict):
         })
     except:
         pass # App keeps running even if DB connection blinks
-st.write("Model type:", type(model))
+
 # 3. YOUR UI CODE (THE SNIPPET YOU SHARED)
 st.set_page_config(page_title="Phishing Shield AI", page_icon="🛡️")
 st.title("🛡️ Phishing Website Detector")
