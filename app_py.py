@@ -69,7 +69,7 @@ if st.button("🚀 Analyze Security"):
         features_as_array = np.array(feature_list).reshape(1, -1)
 
 # Run the prediction
-prediction = model.predict(features_as_array)
+        prediction = model.predict(features_as_array)
         # 4. THE RESULT & LOGGING
         if prediction[0] == 1:
             result = "LEGITIMATE"
