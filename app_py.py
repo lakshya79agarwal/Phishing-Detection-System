@@ -33,7 +33,7 @@ def log_to_cloud(url, verdict):
         })
     except:
         pass # App keeps running even if DB connection blinks
-
+st.write("Model type:", type(model))
 # 3. YOUR UI CODE (THE SNIPPET YOU SHARED)
 st.set_page_config(page_title="Phishing Shield AI", page_icon="🛡️")
 st.title("🛡️ Phishing Website Detector")
