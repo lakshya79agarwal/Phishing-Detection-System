@@ -58,18 +58,15 @@ if st.button("🚀 Analyze Security"):
     if url_input == "":
         st.warning("Please enter a URL first!")
     else:
-        # Prepare 30 features (initialize with 1.0 to ensure floating point consistency)
-feature_list = [1.0] * 30 
-
-# Assign values from the selectboxes
-feature_list[7] = float(ssl)
-feature_list[13] = float(anchor)
-feature_list[25] = float(traffic)
-feature_list[1] = float(prefix)
+        feature_list = [1.0] * 30 
+        feature_list[7] = float(ssl)
+        feature_list[13] = float(anchor)
+        feature_list[25] = float(traffic)
+        feature_list[1] = float(prefix)
 
 # Convert to NumPy array and force the 2D shape (1 row, 30 columns)
 # This is the "Gold Standard" way to prevent TypeErrors in Scikit-Learn
-features_as_array = np.array(feature_list).reshape(1, -1)
+        features_as_array = np.array(feature_list).reshape(1, -1)
 
 # Run the prediction
 prediction = model.predict(features_as_array)
