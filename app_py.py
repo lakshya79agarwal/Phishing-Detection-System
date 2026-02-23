@@ -86,7 +86,7 @@ if st.button("🚀 Analyze Security"):
             time.sleep(1.5)
             
             feature_count = model.n_features_in_
-            feature_list = [1.0] * feature_count 
+            feature_list = [-1.0] * feature_count 
             feature_list[7], feature_list[13], feature_list[25], feature_list[1] = float(ssl), float(anchor), float(traffic), float(prefix)
             
             features_as_array = np.array(feature_list, dtype=np.float64).reshape(1, -1)
